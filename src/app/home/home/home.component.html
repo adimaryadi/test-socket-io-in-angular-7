@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <div class="title">
+    <h3>Pengetesan socket io server</h3>
+  </div>
+</mat-toolbar>
+
+<div class="konten">
+  <div class="login">
+    <mat-card>
+      <div class="row">
+        <div class="col-6">
+            <form class="example-form" [formGroup]="login" (ngSubmit)="Kirim()">
+              <mat-form-field class="example-full-width">
+                <input matInput formControlName="email" placeholder="Email" email>
+              </mat-form-field>              
+              <mat-form-field class="example-full-width">
+                <input matInput formControlName="password" type="password" placeholder="Password" required>
+              </mat-form-field>
+            </form>         
+        </div>
+        <div class="col-6">
+          <div class="login_btn">
+            <button mat-button mat-raised-button [disabled]="!login.valid" (click)="Kirim()" color="primary">Login</button>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
